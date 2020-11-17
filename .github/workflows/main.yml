@@ -39,6 +39,6 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: deploying on surge
-        run: surge ./bootcamp-classes-4-Assignment.surge.sh/ --token ${{ secrets.CLASSES_4}}
+        run: surge ./build bootcamp-classes-4-Assignment.surge.sh/ --token ${{ secrets.CLASSES_4}}
       
           
