@@ -1,13 +1,15 @@
 import React, { useState} from 'react';
 import './App.css';
-import {Msg} from './Msg.jsx';
+import {Msg} from './Msg.js';
 
 function App() {
+  let [ count, setCount] = useState(1)
+  let [ color, setColor] = useState(true)
   return (
     <div className={`App ${color ? 'change-color' : ''}`}>
     {/* <h1>PAKISTAN ZENDABAAD {count} </h1> */}
     <Msg counter={ count}/>
-    <h3>Color Changer ={ color ? 'green' : ' drak blue'}</h3>
+    <h3>Color Changer ={color ? 'green' : ' drak blue'}</h3>
     <br/>
     <button onClick={()=> setCount(++count)}>Update Value</button>
     <br/>
